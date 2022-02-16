@@ -79,7 +79,7 @@ a {
 
 /* bouton "Explorez nos restaurants" */
 
-#bouton {
+#btn {
   border: 2px solid #ff79da;
   height: 50px;
   width: 240px;
@@ -102,9 +102,8 @@ a {
 .choix {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-
   border: 2px solid #f2f2f2;
   background: #f2f2f2;
   border-radius: 25px;
@@ -120,8 +119,13 @@ a {
   font-weight: bold;
 }
 
-#rose {
-  background: #fce2f5;
+#btn_rose {
+  background: #f3e5fa;
+  border: 1px solid #f3e5fa;
+}
+
+.store {
+  color: #9356dc;
 }
 
 /* les cards restaurants */
@@ -136,7 +140,6 @@ a {
 #restaurants {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   gap: 20px;
   padding-bottom: 30px;
 }
@@ -150,8 +153,9 @@ a {
   border-top-width: 0px;
   border-left-width: 0px;
   border-right-width: 0px;
-  height: 250px;
+  height: 280px;
   width: 90%;
+  max-width: 500px;
   margin-left: auto;
   margin-right: auto;
   background: #ffffff;
@@ -170,7 +174,7 @@ a {
 
 .restaurants h4 {
   text-decoration: none;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-bottom: 0px;
   padding-left: 20px;
 }
@@ -214,11 +218,26 @@ span {
   font-style: oblique;
   font-weight: bold;
 }
+
+#couverts {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: #ffffff;
+}
+
+#partenaire {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  padding-left: 20px;
+}
+
 #rubriques_footer p {
   color: #ffffff;
 }
 
 #rubriques_footer a {
   color: #ffffff;
-  padding-left: 30px;
+  padding-left: 20px;
 }
