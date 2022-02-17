@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="fichiers_P3_css/projet3.css" />
-    <link rel="stylesheet" href="fichiers_P3_css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="fichiers_accueil.css/accueil.css" />
+    <link rel="stylesheet" href="fichiers_accueil.css/normalize.css" />
     
     <script
       src="https://kit.fontawesome.com/5cc44e8d6b.js"
@@ -38,9 +38,11 @@
            <h2>Réservez le menu qui vous convient</h2>
            <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins</h3>
 		    </div>
-        <div id="btn">
-         <p>Explorez nos restaurants</p>
-        </div>
+        <a href="#restaurants">
+        <div id="btn">                  
+            <p>Explorez nos restaurants</p>         
+          </div>
+          </a>
        </div>
 
        <!--  section fonctionnement  -->
@@ -50,17 +52,21 @@
         <h2>Fonctionnement</h2>	
 
      	 <div class="choix">
-        <i class="howitworks-item__icon fas fa-mobile-alt"></i>
-       	<p>Choisissez un restaurant</p>
-      </div>
-      
+         <div class="num">1</div>
+        
+          <i class="howitworks-item__icon fas fa-mobile-alt"></i>
+          <p>Choisissez un restaurant</p>
+        </div>
+     
 
      	 <div class="choix">
+        <div class="num">2</div>       
           <i class="howitworks-item__icon fas fa-list"></i>
        		 <p>Composez votre menu</p>
      	 </div>
 
      	 <div class="choix" id="btn_rose">
+        <div class="num">3</div>
           <i class="howitworks-item__icon fas fa-store store"></i> 
        		<p>Dégustez au restaurant</p>
     	  </div>
@@ -73,48 +79,74 @@
 		  <div id="restaurants">
         <h2>Restaurants</h2>
 
-        <a class="" href="#">
+        <a href="page1.html">
           <div class="restaurants">
             <img
               src="images/restaurants/la_Palette_du_goût.jpg"
-              alt="La palette du la_palette_du_goût"
+              alt="La palette du goût"
             />
-            <h4>La palette du goût</h4>
-            <p>Ménilmontant</p>
+            <div class="fiche_resto">
+              <div class="nom_resto">
+               <h4>La palette du goût</h4>
+                <p>Ménilmontant</p>
+              </div>           
+                <i class="far fa-heart heart"></i>
+             </div>
           </div>
         </a>
 
-        <a class="" href="#">
+        <a href="page2.html">
           <div class="restaurants">
             <img
               src="images/restaurants/La_note_enchantée.jpg"
               alt="La note enchantée"
             />
-            <h4>La note enchantée</h4>
-            <p>Charonne</p>
+            <div class="fiche_resto">
+              <div class="nom_resto">
+                <h4>La note enchantée</h4>
+                <p>Charonne</p>
+             </div>
+             
+              <i class="far fa-heart heart" id="jaime"></i>
+            
+           </div>
           </div>
         </a>
 
-        <a class="" href="#">
+        <a href="page3.html">
           <div class="restaurants">
             <img
               src="images/restaurants/A_la_française.jpg"
               alt="A la française"
             />
+            <div class="fiche_resto">
+              <div class="nom_resto">
             <h4><span>A la française</span></h4>
             <p>Cité rouge</p>
           </div>
+          
+            <i class="far fa-heart heart"></i>
+        
+         </div>
+      </div>
         </a>
 
-        <a class="" href="#">
+        <a href="page4.html">
           <div class="restaurants">
             <img
               src="images/restaurants/Le_délice_des_sens.jpg"
               alt="Le délice des sens"
             />
+            <div class="fiche_resto">
+              <div class="nom_resto">
             <h4>Le délice des sens</h4>
             <p>Folie-Méricourt</p>
           </div>
+         
+            <i class="far fa-heart heart"></i>
+         
+         </div>
+      </div>
         </a>
       </div>
 
