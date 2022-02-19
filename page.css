@@ -7,6 +7,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap");
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -31,9 +33,11 @@ header {
   padding-top: 20px;
   padding-left: 15px;
 }
+
 img {
   justify-content: center;
 }
+
 /* Photo restaurant */
 
 #restaurant img {
@@ -42,7 +46,7 @@ img {
   object-fit: cover;
 }
 
-/* titre */
+/* titre et like */
 
 #titre {
   display: flex;
@@ -50,16 +54,18 @@ img {
 }
 
 #titre h1 {
-  font-style: oblique;
-  font-weight: bold;
+  font-family: "shrikhand", cursive;
   padding-left: 20px;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 0px;
 }
 
 .heart {
-  padding-top: 35px;
+  padding-top: 20px;
+  padding-bottom: 30px;
   padding-right: 30px;
+  font-size: 25px;
+  font-weight: normal;
 }
 
 /* les cadres */
@@ -70,6 +76,9 @@ main {
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   padding-top: 20px;
+  position: relative;
+  top: -40px;
+  margin-bottom: -40px;
 }
 
 #cadre_noir {
@@ -82,6 +91,9 @@ main {
 h2 {
   font-size: 20px;
   padding: 30px 0px 0px 20px;
+}
+
+span {
   text-decoration: underline #99e2d0;
 }
 
@@ -128,12 +140,16 @@ h2 {
   font-weight: bold;
 }
 
-#vert {
+#coche {
   background: #99e2d0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-
+/*
+.check {
+  color: #99e2d0;
+}
+*/
 /* bouton "commander"  */
 
 #commander {
