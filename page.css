@@ -57,7 +57,8 @@ img {
   font-family: "shrikhand", cursive;
   padding-left: 20px;
   font-size: 25px;
-  margin-bottom: 0px;
+  font-weight: 900;
+  font-style: italic;
 }
 
 .heart {
@@ -66,6 +67,10 @@ img {
   padding-right: 30px;
   font-size: 25px;
   font-weight: normal;
+}
+
+.heart a:hover {
+  color: #9356dc;
 }
 
 /* les cadres */
@@ -89,12 +94,26 @@ main {
 /* les différents choix */
 
 h2 {
-  font-size: 20px;
-  padding: 30px 0px 0px 20px;
+  font-size: 16px;
+  padding: 0px 0px 0px 20px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+#entrees {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+#plats {
+  padding-bottom: 30px;
 }
 
 span {
   text-decoration: underline #99e2d0;
+  text-underline-position: under;
+  text-decoration-thickness: 3px;
 }
 
 .choix {
@@ -128,15 +147,15 @@ span {
 .menu {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 83%;
 }
 
 .tarif {
   display: flex;
   align-items: flex-end;
-  justify-content: center;
   padding-bottom: 10px;
-  width: 20%;
+  justify-content: center;
+  width: 17%;
   font-weight: bold;
 }
 
@@ -145,11 +164,15 @@ span {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-/*
+
 .check {
   color: #99e2d0;
+  border-radius: 20px;
+  padding: 10px;
+  background: #def8f2;
+  margin-bottom: 10px;
 }
-*/
+
 /* bouton "commander"  */
 
 #commander {
