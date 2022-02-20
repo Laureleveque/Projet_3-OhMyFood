@@ -113,17 +113,20 @@ header {
   padding: 30px 0px 20px 20px;
 }
 
+#les_choix {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .choix a {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
   border: 2px solid #f2f2f2;
   border-radius: 25px;
   width: 300px;
   height: 80px;
   background: #f2f2f2;
-  padding-right: 40px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 20px;
@@ -139,19 +142,38 @@ header {
   font-weight: bold;
 }
 
+.icone_texte {
+  display: flex;
+  align-items: center;
+
+  width: 250px;
+
+  padding-right: 20px;
+}
+
+.icone_texte span {
+  padding-left: 20px;
+}
+
+.icone {
+  width: 19px;
+  padding-left: 5px;
+}
+
 .num {
   border: 1px solid #9356dc;
   width: 30px;
   height: 30px;
-  border-radius: 25px;
-  color: #ffffff;
-  background: #9356dc;
+  border-radius: 20px;
   text-align: center;
   padding-top: 5px;
+  color: #ffffff;
+  background: #9356dc;
+  position: relative;
+  right: 15px;
 }
 
-.icone a:hover {
-  background: linear-gradient(to bottom right, #ff79da, #9356dc);
+.icone:hover {
 }
 
 /* les cards restaurants */
@@ -177,7 +199,7 @@ header {
   padding: 5px;
 }
 
-/* les quatre cards restautants */
+/* les quatre cards restaurants */
 
 #restaurants {
   display: flex;
@@ -197,9 +219,7 @@ header {
   border-right-width: 0px;
   height: 280px;
   width: 90%;
-  max-width: 350px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
   background: #ffffff;
   border-radius: 25px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
@@ -217,6 +237,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding-top: 10px;
 }
 
@@ -236,10 +257,11 @@ header {
 
 .heart {
   padding-right: 30px;
+  font-size: 25px;
 }
 
-span {
-  font-weight: bold;
+.heart a:hover {
+  color: #ff79da;
 }
 
 .selection {
@@ -294,4 +316,45 @@ span {
 #rubriques_footer a {
   color: #ffffff;
   padding-left: 20px;
+}
+
+@media screen and (min-width: 992px) {
+  #les_choix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .restaurants {
+    max-width: 800px;
+  }
+
+  footer h3 {
+    padding-bottom: 20px;
+  }
+
+  #couverts {
+    padding-left: 0px;
+  }
+
+  #rubriques_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #rubriques_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  #couverts {
+    padding-left: 0px;
+  }
 }
