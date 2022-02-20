@@ -1,13 +1,13 @@
+/* police personnalisée */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100;1,400&family=Shrikhand&display=swap");
+
 /* box-sizing */
 * {
   box-sizing: border-box;
 }
-
-/* police personnalisée */
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap");
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
@@ -51,22 +51,22 @@ img {
 #titre {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #titre h1 {
   font-family: "shrikhand", cursive;
-  padding-left: 20px;
   font-size: 25px;
-  font-weight: 900;
+  margin: 0px;
   font-style: italic;
+  padding-left: 20px;
 }
 
 .heart {
-  padding-top: 20px;
-  padding-bottom: 30px;
-  padding-right: 30px;
+  padding-right: 40px;
   font-size: 25px;
-  font-weight: normal;
 }
 
 .heart a:hover {
