@@ -19,6 +19,10 @@
   </head>
 
   <body>
+    <!-- Loading spinner -->
+
+    <span class="loading"></span>
+
     <!--  header : logo  -->
 
     <header>
@@ -26,10 +30,12 @@
     </header>
 
     <!--  map + ville  -->
-
-    <div id="cadre_gris">
+    <div id="cadre-top">
+      <p></p>
+    </div>
+    <div id="cadre-gris">
       <a href="#">
-        <div id="map">
+        <div id="cadre-gris_map">
           <i class="fas fa-map-marker-alt"></i>
           <p>Paris, Belleville</p>
         </div>
@@ -38,10 +44,12 @@
 
     <!--  titres et bouton -->
 
-    <div class="cadre_gris_clair">
-      <div id="titre">
+    <div class="cadre-clair">
+      <div id="cadre-clair_titre">
         <h1>Réservez le menu qui vous convient</h1>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+        <h2>
+          Découvrez des restaurants d'exception, sélectionnés par nos soins
+        </h2>
       </div>
 
       <a href="#restaurants">
@@ -56,8 +64,8 @@
 
       <section id="fonctionnement">
         <h2>Fonctionnement</h2>
-        <div id="les_choix">
-          <div class="choix">
+        <div id="fonctionnement-choix">
+          <div class="fonctionnement-choix_choix">
             <div class="num">1</div>
             <div class="icone_texte">
               <i class="fas fa-mobile-alt icone"></i>
@@ -65,7 +73,7 @@
             </div>
           </div>
 
-          <div class="choix">
+          <div class="fonctionnement-choix_choix">
             <div class="num">2</div>
             <div class="icone_texte">
               <i class="fas fa-list icone"></i>
@@ -73,7 +81,7 @@
             </div>
           </div>
 
-          <div class="choix">
+          <div class="fonctionnement-choix_choix">
             <div class="num">3</div>
             <div class="icone_texte">
               <i class="fas fa-store icone"></i>
@@ -85,7 +93,7 @@
 
       <!-- section restaurants  -->
 
-      <div class="cadre_gris_clair">
+      <div class="cadre-clair">
         <section id="restaurants">
           <h2>Restaurants</h2>
 
@@ -103,7 +111,7 @@
                   <h3>La palette du goût</h3>
                   <p>Ménilmontant</p>
                 </div>
-                <i class="far fa-heart heart"></i>
+                <i class="far fa-heart like"></i>
               </div>
             </div>
           </a>
@@ -122,7 +130,9 @@
                   <h3>La note enchantée</h3>
                   <p>Charonne</p>
                 </div>
-                <i class="far fa-heart heart" id="jaime"></i>
+                <div class="jaime">
+                  <i class="far fa-heart like"></i>
+                </div>
               </div>
             </div>
           </a>
@@ -138,7 +148,9 @@
                   <h3>A la française</h3>
                   <p>Cité rouge</p>
                 </div>
-                <i class="far fa-heart heart"></i>
+                <div class="jaime">
+                  <i class="far fa-heart like"></i>
+                </div>
               </div>
             </div>
           </a>
@@ -154,8 +166,9 @@
                   <h3>Le délice des sens</h3>
                   <p>Folie-Méricourt</p>
                 </div>
-
-                <i class="far fa-heart heart"></i>
+                <div class="jaime">
+                  <i class="far fa-heart like"></i>
+                </div>
               </div>
             </div>
           </a>
@@ -166,19 +179,19 @@
     <!--  Footer  -->
 
     <footer>
-      <div id="cadre_noir">
+      <div id="cadre-noir">
         <h3>Oh My Food</h3>
-        <div id="rubriques_footer">
-          <div id="couverts">
+        <div id="rubriques-footer">
+          <div id="rubriques-footer_couverts">
             <i class="fas fa-utensils fa-fw"></i>
             <a href="#">Proposer un restaurant</a>
           </div>
-          <div id="partenaire">
+          <div id="rubriques-footer_partenaire">
             <i class="fas fa-hands-helping fa-fw"></i>
             <a href="#">Devenir partenaire</a>
           </div>
           <a href="#">Mentions légales</a>
-          <a href="#">Contact</a>
+          <a href="mailto:infos@OhMyFood.com">Contact</a>
         </div>
       </div>
     </footer>
