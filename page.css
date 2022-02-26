@@ -50,7 +50,6 @@ img {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-
 #titre h1 {
   font-family: "shrikhand", cursive;
   font-size: 25px;
@@ -59,13 +58,12 @@ img {
   padding-left: 20px;
 }
 
-.heart {
+.like {
   padding-right: 40px;
   font-size: 25px;
 }
-
-.heart a:hover {
-  color: #9356dc;
+.like:hover {
+  color: #ff79da;
 }
 
 /* les cadres */
@@ -97,16 +95,33 @@ h2 {
 #entrees {
   padding-top: 10px;
   padding-bottom: 30px;
-  opacity: 1;
-  animation-duration: 3s;
+  opacity: 0;
+  animation: 2s slide forwards;
 }
 
 #plats {
   padding-bottom: 30px;
-  opacity: 1;
-  animation-duration: 6s;
+  opacity: 0;
+  animation: 2s slide forwards;
+  animation-delay: 1s;
 }
 
+#desserts {
+  opacity: 0;
+  animation: 2s slide forwards;
+  animation-delay: 2s;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 span {
   padding-bottom: 5px;
   border-bottom: 5px solid #99e2d0;
@@ -124,7 +139,6 @@ span {
   margin-bottom: 20px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
-
 .choix p {
   margin: 0px;
   padding-top: 10px;
@@ -133,7 +147,7 @@ span {
   font-weight: normal;
 }
 
-.choix h3 {
+h3 {
   padding: 15px 0px 0px 10px;
   margin: 0px;
   font-size: 17px;
@@ -157,22 +171,24 @@ span {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-
+.tarif .check {
+  display: none;
+}
 .tarif:hover {
   transition: border-right 0.5s ease-in-out;
   border-right: 70px solid #99e2d0;
-}
-
-.check {
-  display: none;
-}
-.check:hover {
-  color: #99e2d0;
-  border-radius: 20px;
-  padding: 10px;
-  background: #def8f2;
-  margin-bottom: 10px;
-  transform: rotate(180deg);
+  text-overflow: ellipsis;
+  /*
+  .check {
+    display: block;
+    color: $green;
+    border-radius: 20px;
+    padding: 10px;
+    background: #6f00ff
+    margin-bottom: 10px;
+    transform: rotate(180deg);
+  }
+  */
 }
 
 /* bouton "commander"  */
@@ -182,10 +198,9 @@ span {
   height: 60px;
   width: 200px;
   border-radius: 25px;
-  margin: 45px auto;
+  margin: 60px auto;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
-
 #commander p {
   margin: 0px;
   text-align: center;
@@ -201,6 +216,13 @@ span {
   flex-direction: column;
   padding-top: 20px;
   gap: 10px;
+}
+#rubriques_footer p {
+  color: #ffffff;
+}
+#rubriques_footer a {
+  color: #ffffff;
+  padding-left: 20px;
 }
 
 #cadre_noir h3 {
@@ -227,15 +249,6 @@ span {
   padding-left: 20px;
 }
 
-#rubriques_footer p {
-  color: #ffffff;
-}
-
-#rubriques_footer a {
-  color: #ffffff;
-  padding-left: 20px;
-}
-
 @media screen and (min-width: 992px) {
   #restaurant img {
     width: 100%;
@@ -249,7 +262,6 @@ span {
     padding-top: 20px;
     padding-bottom: 75px;
   }
-
   #titre h1 {
     font-size: 30px;
   }
