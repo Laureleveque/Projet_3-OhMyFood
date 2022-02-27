@@ -58,12 +58,29 @@ img {
   padding-left: 20px;
 }
 
-.like {
+.jaime {
   padding-right: 40px;
   font-size: 25px;
 }
-.like:hover {
-  color: #ff79da;
+
+.like1 {
+  position: absolute;
+  z-index: 1;
+}
+
+.like2 {
+  opacity: 0;
+}
+
+.jaime:hover {
+  transition: color 1s ease-out;
+  background-clip: text;
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  color: transparent;
+}
+.jaime:hover .like2 {
+  opacity: 1;
+  color: transparent;
 }
 
 /* les cadres */
@@ -208,6 +225,10 @@ h3 {
   font-weight: bold;
   padding: 18px 0px 0px 0px;
   color: #ffffff;
+}
+#commander:hover {
+  opacity: 0.8;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 /*footer */
