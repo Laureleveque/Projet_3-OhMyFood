@@ -73,7 +73,6 @@ img {
 }
 
 .jaime:hover {
-  transition: color 1s ease-out;
   background-clip: text;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);
   color: transparent;
@@ -147,15 +146,25 @@ span {
 .choix {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 90%;
   background: #ffffff;
   border-radius: 20px;
-  width: 340px;
+  margin-bottom: 20px;
+  max-width: 500px;
   height: 80px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
+.choix:hover .coche {
+  opacity: 1;
+  margin-right: 0px;
+}
+.choix:hover .check {
+  transform: rotate(300deg);
+}
+
 .choix p {
   margin: 0px;
   padding-top: 10px;
@@ -174,38 +183,36 @@ h3 {
 .menu {
   display: flex;
   flex-direction: column;
-  width: 83%;
+  text-overflow: ellipsis;
 }
 
 .tarif {
   display: flex;
   align-items: flex-end;
-  padding-bottom: 18px;
-  justify-content: end;
-  padding-right: 20px;
-  width: 17%;
+  padding-bottom: 20px;
+  padding-right: 15px;
   font-weight: bold;
+  margin-left: auto;
+}
+
+.coche {
+  opacity: 0;
+  margin-right: -60px;
+  display: flex;
+  width: 60px;
+  height: 80px;
+  background: #99e2d0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.tarif .check {
-  display: none;
-}
-.tarif:hover {
-  transition: border-right 0.5s ease-in-out;
-  border-right: 70px solid #99e2d0;
-  text-overflow: ellipsis;
-  /*
-  .check {
-    display: block;
-    color: $green;
-    border-radius: 20px;
-    padding: 10px;
-    background: #6f00ff
-    margin-bottom: 10px;
-    transform: rotate(180deg);
-  }
-  */
+.coche .check {
+  width: 25px;
+  height: 25px;
+  color: #99e2d0;
+  padding: 5px;
+  border-radius: 25px;
+  background: #ffffff;
+  margin: auto;
 }
 
 /* bouton "commander"  */
@@ -226,6 +233,7 @@ h3 {
   padding: 18px 0px 0px 0px;
   color: #ffffff;
 }
+
 #commander:hover {
   opacity: 0.8;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.4);
