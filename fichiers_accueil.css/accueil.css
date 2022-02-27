@@ -1,27 +1,71 @@
+@charset "UTF-8";
+/* police personnalisée */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100;1,400&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,100;1,400;1,700&display=swap");
 /* box-sizing */
 * {
   box-sizing: border-box;
 }
 
-/* police personnalisée */
+/* variables */
+/*  loading spinner */
+/*
+.loading {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #f2f2f2;
+  animation: hideLoader 3s 1 forwards;
+  animation-delay: 1s;
+}
+.loading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  border: #ff79da solid 5px;
+  border-top-color: #99e2d0;
+  border-bottom-color: #9356dc;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap");
+@keyframes hideLoader {
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
 
+@keyframes spin {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+*/
 body {
   font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   text-decoration-line: none;
-  color: black;
+  color: #000000;
 }
 
-h4 {
+h3 {
   margin: 0px;
 }
 
 /* Logo */
-
 header {
   text-align: center;
   padding-top: 30px;
@@ -29,64 +73,55 @@ header {
 }
 
 /* icone map + ville */
-
-#cadre_gris {
-  background: rgb(223, 216, 216);
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-top: 5px solid darkgrey;
-}
-
-#map {
+#cadre-gris_map {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-#map p {
+#cadre-gris_map P {
   font-weight: bold;
   padding-left: 10px;
 }
 
 /* les cadres */
-
-.cadre_gris_clair {
+.cadre-clair {
   background: #faf6f6;
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-#cadre_gris {
-  background: rgb(223, 216, 216);
+#cadre-gris {
+  background: #eceaea;
   padding-top: 10px;
   padding-bottom: 10px;
-  border-top: 5px solid darkgrey;
 }
 
-#cadre_noir {
-  background: black;
+#cadre-top {
+  height: 8px;
+  background-image: linear-gradient(to bottom, #aca3a9, #eceaea);
+}
+
+#cadre-noir {
+  background: #000000;
   padding-bottom: 30px;
   margin-bottom: 0px;
 }
 
 /* titres */
-
-#titre h2 {
-  font-weight: bold;
-  font-size: 28px;
+#cadre-clair_titre h1 {
+  font-size: 30px;
   text-align: center;
-  margin: 0px;
+  margin: auto;
 }
 
-#titre h3 {
+#cadre-clair_titre h2 {
   font-size: 18px;
   font-weight: normal;
-  color: grey;
+  color: #aca3a9;
   text-align: center;
 }
 
 /* bouton "Explorez nos restaurants" */
-
 #btn {
   border: 0px solid transparent;
   height: 60px;
@@ -101,24 +136,42 @@ header {
   padding-top: 5px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
+#btn:hover {
+  opacity: 0.8;
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.4);
+}
 
 /* les différents choix */
-
 #fonctionnement {
   margin-bottom: 50px;
 }
-
 #fonctionnement h2 {
-  font-size: 25px;
+  font-size: 23px;
   padding: 30px 0px 20px 20px;
 }
 
-#les_choix {
+#fonctionnement-choix {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.choix a {
+
+.icone {
+  font-size: 19px;
+  padding-left: 5px;
+}
+
+.icone_texte {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  padding-right: 20px;
+}
+.icone_texte span {
+  padding-left: 20px;
+}
+
+.fonctionnement-choix_choix {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -127,37 +180,19 @@ header {
   width: 300px;
   height: 80px;
   background: #f2f2f2;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0px auto 20px auto;
   margin-bottom: 20px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
-
-.choix a:hover {
+.fonctionnement-choix_choix p {
+  font-weight: bold;
+}
+.fonctionnement-choix_choix:hover {
   background: #f3e5fa;
   border: 2px solid #f3e5fa;
 }
-
-.choix p {
-  font-weight: bold;
-}
-
-.icone_texte {
-  display: flex;
-  align-items: center;
-
-  width: 250px;
-
-  padding-right: 20px;
-}
-
-.icone_texte span {
-  padding-left: 20px;
-}
-
-.icone {
-  width: 19px;
-  padding-left: 5px;
+.fonctionnement-choix_choix:hover .icone {
+  color: #9356dc;
 }
 
 .num {
@@ -173,16 +208,7 @@ header {
   right: 15px;
 }
 
-.icone:hover {
-}
-
 /* les cards restaurants */
-
-#restaurants h2 {
-  font-size: 25px;
-  padding: 0px 0px 0px 20px;
-}
-
 .photo {
   position: relative;
   text-align: center;
@@ -200,16 +226,18 @@ header {
 }
 
 /* les quatre cards restaurants */
-
 #restaurants {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 30px;
 }
+#restaurants h2 {
+  font-size: 23px;
+  padding: 0px 0px 0px 20px;
+}
 
 /* chaque card restaurant */
-
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -224,7 +252,6 @@ header {
   border-radius: 25px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
-
 .restaurants img {
   width: 100%;
   height: 200px;
@@ -249,19 +276,34 @@ header {
   padding-top: 5px;
   padding-left: 20px;
 }
-
 .nom_resto p {
   margin: 0px;
   padding-top: 5px;
 }
 
-.heart {
+.jaime {
   padding-right: 30px;
   font-size: 25px;
 }
 
-.heart a:hover {
-  color: #ff79da;
+.like1 {
+  position: absolute;
+  z-index: 1;
+}
+
+.like2 {
+  opacity: 0;
+}
+
+.jaime:hover {
+  transition: color 1s ease-out;
+  background-clip: text;
+  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  color: transparent;
+}
+.jaime:hover .like2 {
+  opacity: 1;
+  color: transparent;
 }
 
 .selection {
@@ -270,22 +312,28 @@ header {
   justify-content: space-around;
   width: 200px;
   height: 80px;
-  border: 2px solid grey;
-  background: grey;
+  border: 2px solid #aca3a9;
+  background: #aca3a9;
   border-radius: 20px;
   padding-bottom: 20px;
 }
 
 /*footer */
-
-#rubriques_footer {
+#rubriques-footer {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
   gap: 10px;
 }
+#rubriques-footer p {
+  color: #ffffff;
+}
+#rubriques-footer a {
+  color: #ffffff;
+  padding-left: 20px;
+}
 
-#cadre_noir h3 {
+#cadre-noir h3 {
   padding-top: 30px;
   padding-left: 20px;
   color: #ffffff;
@@ -295,31 +343,22 @@ header {
   margin: 0px;
 }
 
-#couverts {
+#rubriques-footer_couverts {
   display: flex;
   align-items: center;
   padding-left: 20px;
   color: #ffffff;
 }
 
-#partenaire {
+#rubriques-footer_partenaire {
   display: flex;
   align-items: center;
-  color: #ffffff;
-  padding-left: 20px;
-}
-
-#rubriques_footer p {
-  color: #ffffff;
-}
-
-#rubriques_footer a {
   color: #ffffff;
   padding-left: 20px;
 }
 
 @media screen and (min-width: 992px) {
-  #les_choix {
+  #fonctionnement-choix {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -335,26 +374,27 @@ header {
     padding-bottom: 20px;
   }
 
-  #couverts {
+  #rubriques-footer_couverts {
     padding-left: 0px;
   }
 
-  #rubriques_footer {
+  #rubriques-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-bottom: 20px;
   }
 }
-
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  #rubriques_footer {
+  #rubriques-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
-  #couverts {
+  #rubriques-footer_couverts {
     padding-left: 0px;
   }
 }
+
+/*# sourceMappingURL=accueil.css.map */
