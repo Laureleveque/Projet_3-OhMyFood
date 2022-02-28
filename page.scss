@@ -168,6 +168,7 @@ span {
       margin-right: 0px;
       transition: 0.5s;
       opacity: 1;
+      width: 60px;
     }
     .check {
       animation: rotation 1.5s;
@@ -225,9 +226,9 @@ h3 {
 
 .coche {
   opacity: 0;
-  margin-right: -60px;
+  margin-right: 0px;
   display: flex;
-  width: 60px;
+  width: 0px;
   height: 80px;
   background: #99e2d0;
   border-top-right-radius: 20px;
