@@ -16,6 +16,12 @@ a {
   color: black;
 }
 
+$purple: #9356dc;
+$green: #2a8f75;
+$light-green: #99e2d0;
+$pink: #ff79da;
+$white: #ffffff;
+
 /* Logo */
 header {
   display: flex;
@@ -49,13 +55,13 @@ img {
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
-}
-#titre h1 {
-  font-family: "shrikhand", cursive;
-  font-size: 25px;
-  margin: 0px;
-  font-style: italic;
-  padding-left: 20px;
+  h1 {
+    font-family: "shrikhand", cursive;
+    font-size: 25px;
+    margin: 0px;
+    font-style: italic;
+    padding-left: 20px;
+  }
 }
 
 .jaime {
@@ -74,12 +80,12 @@ img {
 
 .jaime:hover {
   background-clip: text;
-  background-image: linear-gradient(to bottom, #ff79da, #9356dc);
+  background-image: linear-gradient(to bottom, $pink, $purple);
   color: transparent;
-}
-.jaime:hover .like2 {
-  opacity: 1;
-  color: transparent;
+  .like2 {
+    opacity: 1;
+    color: transparent;
+  }
 }
 
 /* les cadres */
@@ -100,6 +106,7 @@ main {
 }
 
 /* les différents choix */
+
 h2 {
   font-size: 16px;
   padding: 0px 0px 0px 20px;
@@ -133,6 +140,7 @@ h2 {
     transform: translateY(20%);
     opacity: 0;
   }
+
   100% {
     transform: translateY(0);
     opacity: 1;
@@ -154,14 +162,17 @@ span {
   height: 80px;
   margin: 0px auto 20px auto;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
-}
-.choix:hover .coche {
-  margin-right: 0px;
-  transition: 0.5s;
-  opacity: 1;
-}
-.choix:hover .check {
-  animation: rotation 1.5s;
+
+  &:hover {
+    .coche {
+      margin-right: 0px;
+      transition: 0.5s;
+      opacity: 1;
+    }
+    .check {
+      animation: rotation 1.5s;
+    }
+  }
 }
 
 @keyframes rotation {
@@ -172,6 +183,7 @@ span {
     transform: rotate(0);
   }
 }
+
 .choix p {
   margin: 0px;
   padding-top: 10px;
@@ -193,12 +205,12 @@ h3 {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-}
-.menu h3 {
-  text-overflow: ellipsis;
-}
-.menu p {
-  text-overflow: ellipsis;
+  h3 {
+    text-overflow: ellipsis;
+  }
+  p {
+    text-overflow: ellipsis;
+  }
 }
 
 .tarif {
@@ -220,18 +232,20 @@ h3 {
   background: #99e2d0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-.coche .check {
-  width: 25px;
-  height: 25px;
-  color: #99e2d0;
-  padding: 5px;
-  border-radius: 25px;
-  background: #ffffff;
-  margin: auto;
+
+  .check {
+    width: 25px;
+    height: 25px;
+    color: #99e2d0;
+    padding: 5px;
+    border-radius: 25px;
+    background: #ffffff;
+    margin: auto;
+  }
 }
 
 /* bouton "commander"  */
+
 #commander {
   border: 1px solid transparent;
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
@@ -240,40 +254,40 @@ h3 {
   border-radius: 25px;
   margin: 60px auto;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  p {
+    margin: 0px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 18px 0px 0px 0px;
+    color: #ffffff;
+  }
 }
-#commander p {
-  margin: 0px;
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  padding: 18px 0px 0px 0px;
-  color: #ffffff;
-}
-
 #commander:hover {
   opacity: 0.8;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.4);
 }
 
 /*footer */
+
 #rubriques_footer {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
   gap: 10px;
-}
-#rubriques_footer p {
-  color: #ffffff;
-}
-#rubriques_footer a {
-  color: #ffffff;
-  padding-left: 20px;
+  p {
+    color: $white;
+  }
+  a {
+    color: $white;
+    padding-left: 20px;
+  }
 }
 
 #cadre_noir h3 {
   padding-top: 30px;
   padding-left: 20px;
-  color: #ffffff;
+  color: $white;
   text-align: left;
   font-style: oblique;
   font-weight: bold;
@@ -284,13 +298,13 @@ h3 {
   display: flex;
   align-items: center;
   padding-left: 20px;
-  color: #ffffff;
+  color: $white;
 }
 
 #partenaire {
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: $white;
   padding-left: 20px;
 }
 
@@ -306,9 +320,9 @@ h3 {
     margin-right: 40px;
     padding-top: 20px;
     padding-bottom: 75px;
-  }
-  #titre h1 {
-    font-size: 30px;
+    h1 {
+      font-size: 30px;
+    }
   }
 
   h2 {
@@ -355,5 +369,3 @@ h3 {
     padding-left: 0px;
   }
 }
-
-/*# sourceMappingURL=page.css.map */

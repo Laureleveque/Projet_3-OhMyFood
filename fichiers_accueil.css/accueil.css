@@ -9,7 +9,6 @@
 
 /* variables */
 /*  loading spinner */
-/*
 .loading {
   display: block;
   position: fixed;
@@ -20,6 +19,7 @@
   animation: hideLoader 3s 1 forwards;
   animation-delay: 1s;
 }
+
 .loading::after {
   content: "";
   display: block;
@@ -43,13 +43,11 @@
     z-index: -1;
   }
 }
-
 @keyframes spin {
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-*/
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -296,7 +294,7 @@ header {
 }
 
 .jaime:hover {
-  transition: color 1s ease-out;
+  transition: color 300ms;
   background-clip: text;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);
   color: transparent;
