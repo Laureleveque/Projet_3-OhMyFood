@@ -164,6 +164,7 @@ span {
   transition: 400ms;
   opacity: 1;
   width: 60px;
+  flex-shrink: 0;
 }
 .choix-menu:hover .check {
   animation: rotation 500ms;
