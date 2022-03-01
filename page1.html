@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="page.css" />
     <link rel="stylesheet" href="fichiers_accueil.css/normalize.css" />
-
     <script
       src="https://kit.fontawesome.com/5cc44e8d6b.js"
       crossorigin="anonymous"
     ></script>
-
     <title>Oh My Food !</title>
   </head>
 
   <body>
+    <!--   header : fleche-accueil + logo   -->
+
     <header>
       <a href="index.html">
         <i class="fas fa-arrow-left" id="fleche"></i>
@@ -22,7 +22,7 @@
       <img src="images/logo/Logo_OMF.svg" alt="Logo Oh My Food" />
     </header>
 
-    <!--    -->
+    <!-- photo restaurant   -->
 
     <div id="restaurant">
       <img
@@ -32,124 +32,130 @@
     </div>
 
     <main>
+      <!-- titre restaurant  -->
+
       <div id="titre">
         <h1>La palette du goût</h1>
 
         <div class="jaime">
-          <i class="far fa-heart like1"></i>
-          <i class="fas fa-heart like2"></i>
+          <i class="far fa-heart jaime1"></i>
+          <i class="fas fa-heart jaime2"></i>
         </div>
       </div>
 
-      <!-- Menu  -->
+      <!-- section entrees -->
 
       <section id="entrees">
         <h2><span>ENTR</span>ÉES</h2>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Fricassées d'escargots</h3>
             <p>Au piment d'Espelette</p>
           </div>
-          <div class="tarif">25€</div>
+          <div class="choix-menu_tarif">25€</div>
 
-          <div class="coche">
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Foie gras de canard mi-cuit</h3>
             <p>Et ses copeaux de truffe noire</p>
           </div>
-          <div class="tarif">35€</div>
-          <div class="coche">
+          <div class="choix-menu_tarif">35€</div>
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Oeuf au plat</h3>
             <p>Assaisonné à la truffe sur lit de caviar</p>
           </div>
-          <div class="tarif">20€</div>
-          <div class="coche">
+          <div class="choix-menu_tarif">20€</div>
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
       </section>
+
+      <!-- section plats  -->
 
       <section id="plats">
         <h2><span>PLAT</span>S</h2>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Filet de beuf aux herbes</h3>
             <p>Accompagné de sa ribambelle de légumes</p>
           </div>
-          <div class="tarif">40€</div>
-          <div class="coche">
+          <div class="choix-menu_tarif">40€</div>
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Parmentier de queue de boeuf</h3>
             <p>A la truffe noire sur sa purée de panais</p>
           </div>
-          <div class="tarif">35€</div>
-          <div class="coche">
+          <div class="choix-menu_tarif">35€</div>
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Filet de turbo</h3>
             <p>Aux agrumes</p>
           </div>
-          <div class="tarif">44€</div>
-          <div class="coche">
+          <div class="choix-menu_tarif">44€</div>
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
       </section>
 
+      <!--  section desserts  -->
+
       <section id="desserts">
         <h2><span>DESS</span>ERTS</h2>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Paris-Brest</h3>
             <p>Revisité</p>
           </div>
-          <div class="tarif">18€</div>
-          <div class="coche">
+          <div class="choix-menu_tarif">18€</div>
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Macaron au chocolat d'exception</h3>
             <p>Et glace à la vanille de Madagascar</p>
           </div>
-          <div class="tarif">22€</div>
-          <div class="coche">
+          <div class="choix-menu_tarif">22€</div>
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
 
-        <div class="choix">
-          <div class="menu">
+        <div class="choix-menu">
+          <div class="choix-menu_texte">
             <h3>Mousse au chocolat</h3>
             <p>Au piment d'Espelette et à la truffe noire</p>
           </div>
-          <div class="tarif">23€</div>
-          <div class="coche">
+          <div class="choix-menu_tarif">23€</div>
+          <div class="choix-menu_coche">
             <i class="fa fa-check check"></i>
           </div>
         </div>
@@ -164,15 +170,17 @@
       </a>
     </main>
 
+    <!-- footer -->
+
     <footer>
       <div id="cadre_noir">
         <h3>Oh My Food</h3>
-        <div id="rubriques_footer">
-          <div id="couverts">
+        <div id="rubrique-footer">
+          <div id="rubrique-footer_couverts">
             <i class="fas fa-utensils fa-fw"></i>
             <a href="#">Proposer un restaurant</a>
           </div>
-          <div id="partenaire">
+          <div id="rubrique-footer_partenaire">
             <i class="fas fa-hands-helping fa-fw"></i>
             <a href="#">Devenir partenaire</a>
           </div>

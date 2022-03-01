@@ -61,6 +61,8 @@ $grey: #aca3a9;
   }
 }
 
+/* body */
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -124,9 +126,9 @@ header {
 /* titres */
 
 #cadre-clair_titre h1 {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
-  margin: auto;
+  margin: 3rem;
 }
 
 #cadre-clair_titre h2 {
@@ -151,7 +153,6 @@ header {
   margin: 30px auto;
   padding-top: 5px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
-
   &:hover {
     opacity: 0.8;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.4);
@@ -161,6 +162,8 @@ header {
 /* les différents choix */
 
 #fonctionnement {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 50px;
   h2 {
     font-size: 23px;
@@ -168,18 +171,7 @@ header {
   }
 }
 
-#fonctionnement-choix {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.icone {
-  font-size: 19px;
-  padding-left: 5px;
-}
-
-.icone_texte {
+.fonctionnement-etapes_texte {
   display: flex;
   align-items: center;
   width: 250px;
@@ -189,7 +181,12 @@ header {
   }
 }
 
-.fonctionnement-choix_choix {
+.icone {
+  font-size: 19px;
+  padding-left: 5px;
+}
+
+.fonctionnement-etapes {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -201,22 +198,19 @@ header {
   margin: 0px auto 20px auto;
   margin-bottom: 20px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
-
   p {
     font-weight: bold;
   }
-
   &:hover {
     background: #f3e5fa;
     border: 2px solid #f3e5fa;
-
     .icone {
       color: $purple;
     }
   }
 }
 
-.num {
+.fonctionnement-etapes_num {
   border: 1px solid $purple;
   width: 30px;
   height: 30px;
@@ -252,18 +246,18 @@ header {
 #restaurants {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-bottom: 30px;
-
+  background: #faf6f6;
+  padding-bottom: 40px;
   h2 {
     font-size: 23px;
-    padding: 0px 0px 0px 20px;
+    padding: 50px 0px 30px 20px;
+    margin: 0px;
   }
 }
 
 /* chaque card restaurant */
 
-.restaurants {
+.restaurant {
   display: flex;
   flex-direction: column;
   border: 1px solid transparent;
@@ -272,11 +266,12 @@ header {
   border-right-width: 0px;
   height: 280px;
   width: 90%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   background: $white;
   border-radius: 25px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
-
+  margin-bottom: 20px;
   img {
     width: 100%;
     height: 200px;
@@ -286,7 +281,7 @@ header {
   }
 }
 
-.fiche_resto {
+.restaurant-fiche {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -294,14 +289,13 @@ header {
   padding-top: 10px;
 }
 
-.nom_resto {
+.restaurant-fiche_nom {
   display: flex;
   flex-direction: column;
   width: 290px;
   text-decoration: none;
   padding-top: 5px;
   padding-left: 20px;
-
   p {
     margin: 0px;
     padding-top: 5px;
@@ -313,44 +307,32 @@ header {
   font-size: 25px;
 }
 
-.like1 {
+.jaime1 {
   position: absolute;
-  z-index: 1;
 }
 
-.like2 {
+.jaime2 {
   opacity: 0;
 }
 
 .jaime:hover {
   transition: color 300ms;
-  background-clip: text;
+  -webkit-background-clip: text;
   background-image: linear-gradient(to bottom, $pink, $purple);
   color: transparent;
-  .like2 {
+  .jaime2 {
     opacity: 1;
     color: transparent;
   }
 }
 
-.selection {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 200px;
-  height: 80px;
-  border: 2px solid $grey;
-  background: $grey;
-  border-radius: 20px;
-  padding-bottom: 20px;
-}
-
 /*footer */
 
-#rubriques-footer {
+#rubrique-footer {
   display: flex;
   flex-direction: column;
   padding-top: 20px;
+  padding-bottom: 20px;
   gap: 10px;
   p {
     color: $white;
@@ -371,14 +353,14 @@ header {
   margin: 0px;
 }
 
-#rubriques-footer_couverts {
+#rubrique-footer_couverts {
   display: flex;
   align-items: center;
   padding-left: 20px;
   color: $white;
 }
 
-#rubriques-footer_partenaire {
+#rubrique-footer_partenaire {
   display: flex;
   align-items: center;
   color: $white;
@@ -386,15 +368,14 @@ header {
 }
 
 @media screen and (min-width: 992px) {
-  #fonctionnement-choix {
+  #fonctionnement-desktop {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-left: 20px;
-    margin-right: 20px;
+    justify-content: space-between;
+    margin-left: 10px;
   }
 
-  .restaurants {
+  .restaurant {
     max-width: 800px;
   }
 
@@ -402,11 +383,11 @@ header {
     padding-bottom: 20px;
   }
 
-  #rubriques-footer_couverts {
+  #rubrique-footer_couverts {
     padding-left: 0px;
   }
 
-  #rubriques-footer {
+  #rubrique-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -415,13 +396,13 @@ header {
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
-  #rubriques-footer {
+  #rubrique-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
   }
 
-  #rubriques-footer_couverts {
+  #rubrique-footer_couverts {
     padding-left: 0px;
   }
 }
