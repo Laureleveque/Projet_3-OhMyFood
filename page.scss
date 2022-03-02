@@ -163,9 +163,7 @@ span {
   height: 80px;
   margin: 0px auto 20px auto;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+
   &:hover {
     .choix-menu_coche {
       margin-right: 0px;
