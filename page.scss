@@ -7,6 +7,11 @@
   box-sizing: border-box;
 }
 
+@mixin apparition-menu {
+  opacity: 0;
+  animation: 2s slide forwards;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -115,20 +120,17 @@ h2 {
 #entrees {
   padding-top: 10px;
   padding-bottom: 30px;
-  opacity: 0;
-  animation: 2s slide forwards;
+  @include apparition-menu;
 }
 
 #plats {
   padding-bottom: 30px;
-  opacity: 0;
-  animation: 2s slide forwards;
+  @include apparition-menu;
   animation-delay: 1s;
 }
 
 #desserts {
-  opacity: 0;
-  animation: 2s slide forwards;
+  @include apparition-menu;
   animation-delay: 2s;
 }
 
