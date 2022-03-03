@@ -85,7 +85,7 @@ img {
 
 /* les cadres */
 main {
-  background: #faf6f6;
+  background: #f2f2f2;
   padding-bottom: 30px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -96,7 +96,7 @@ main {
 }
 
 #cadre_noir {
-  background: black;
+  background: #000000;
   padding-bottom: 30px;
 }
 
