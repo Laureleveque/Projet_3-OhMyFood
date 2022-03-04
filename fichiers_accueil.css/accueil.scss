@@ -20,6 +20,13 @@ $color-secondary: #f2f2f2;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
+@mixin lien-footer {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: #ffffff;
+}
+
 /*  loading spinner */
 
 .loading {
@@ -67,6 +74,7 @@ body {
   font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
+  min-width: 375px;
 }
 
 a {
@@ -82,8 +90,7 @@ h3 {
 
 header {
   text-align: center;
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding: 30px 0px 20px 0px;
 }
 
 /* icone map + ville */
@@ -102,14 +109,12 @@ header {
 
 .cadre-clair {
   background: $color-secondary;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 0px;
 }
 
 #cadre-gris {
   background: #e0dede;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0px;
 }
 
 #cadre-top {
@@ -197,7 +202,6 @@ header {
   height: 80px;
   background: $color-secondary;
   margin: 0px auto 20px auto;
-  margin-bottom: 20px;
   @include ombre;
   p {
     font-weight: bold;
@@ -280,6 +284,9 @@ header {
     border-top-right-radius: 25px;
     object-fit: cover;
   }
+  @media screen and (min-width: 992px) {
+    max-width: 800px;
+  }
 }
 
 .restaurant-fiche {
@@ -295,8 +302,7 @@ header {
   flex-direction: column;
   width: 290px;
   text-decoration: none;
-  padding-top: 5px;
-  padding-left: 20px;
+  padding: 5px 0px 0px 20px;
   p {
     margin: 0px;
     padding-top: 5px;
@@ -332,40 +338,41 @@ header {
 #rubrique-footer {
   display: flex;
   flex-direction: column;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 0px;
   gap: 10px;
-  p {
-    color: #ffffff;
-  }
   a {
-    color: #ffffff;
+    color: white;
     padding-left: 20px;
+  }
+  &_couverts {
+    @include lien-footer;
+  }
+  &_partenaire {
+    @include lien-footer;
+  }
+  @media screen and (min-width: 768px) and (max-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 992px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 20px;
   }
 }
 
-#cadre-noir h3 {
-  padding-top: 30px;
-  padding-left: 20px;
+footer h3 {
+  padding: 30px 0px 0px 20px;
   color: #ffffff;
   text-align: left;
   font-style: oblique;
   font-weight: bold;
   margin: 0px;
-}
-
-#rubrique-footer_couverts {
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-  color: #ffffff;
-}
-
-#rubrique-footer_partenaire {
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  padding-left: 20px;
+  @media screen and (min-width: 992px) {
+    padding-bottom: 20px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -374,36 +381,5 @@ header {
     flex-direction: row;
     justify-content: space-between;
     margin-left: 10px;
-  }
-
-  .restaurant {
-    max-width: 800px;
-  }
-
-  footer h3 {
-    padding-bottom: 20px;
-  }
-
-  #rubrique-footer_couverts {
-    padding-left: 0px;
-  }
-
-  #rubrique-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 992px) {
-  #rubrique-footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  #rubrique-footer_couverts {
-    padding-left: 0px;
   }
 }
