@@ -1,36 +1,30 @@
 @charset "UTF-8";
+
 /* police personnalisée */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100;1,400&family=Shrikhand&display=swap");
+
+/* mixins */
+@import "./utils/mixins";
+
 /* box-sizing */
 * {
   box-sizing: border-box;
 }
 
-@mixin apparition-menu {
-  opacity: 0;
-  animation: 2s slide forwards;
-}
+/* variables */
 
-@mixin lien-footer {
-  display: flex;
-  align-items: center;
-  padding-left: 20px;
-  color: #ffffff;
-}
+$color-primary: #f2f2f2;
+$color-secondary: #ffffff;
 
-@mixin footer-responsive {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+/* body */
 
 body {
   font-family: "Roboto", sans-serif;
-  min-width: 375px;
 }
 
 a {
+  -webkit-text-decoration-line: none;
   text-decoration-line: none;
   color: black;
 }
@@ -47,8 +41,10 @@ header {
   width: 60px;
   height: 60px;
   font-weight: bold;
-  padding-top: 20px;
-  padding-left: 15px;
+  padding: 20px 0px 0px 15px;
+  &:hover {
+    color: #99e2d0;
+  }
 }
 
 /* Photo restaurant */
@@ -58,16 +54,15 @@ header {
     justify-content: center;
     width: 100%;
     height: 250px;
+    -o-object-fit: cover;
     object-fit: cover;
     @media screen and (min-width: 768px) and (max-width: 992px) {
       width: 100%;
       height: 400px;
-      object-fit: cover;
     }
     @media screen and (min-width: 992px) {
       width: 100%;
       height: 500px;
-      object-fit: cover;
     }
   }
 }
@@ -78,7 +73,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 0px;
+  padding: 40px 0px;
   h1 {
     font-family: "shrikhand", cursive;
     font-size: 25px;
@@ -101,6 +96,7 @@ header {
   padding-right: 40px;
   font-size: 25px;
   &:hover {
+    cursor: pointer;
     transition: color 300ms;
     -webkit-background-clip: text;
     background-image: linear-gradient(to bottom, #ff79da, #9356dc);
@@ -122,8 +118,9 @@ header {
 }
 
 /* les cadres */
+
 main {
-  background: #f2f2f2;
+  background: $color-primary;
   padding-bottom: 30px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -152,7 +149,6 @@ h2 {
 }
 
 #entrees {
-  padding-top: 10px;
   padding-bottom: 30px;
   @include apparition-menu;
 }
@@ -160,12 +156,26 @@ h2 {
 #plats {
   padding-bottom: 30px;
   @include apparition-menu;
+  -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
 #desserts {
   @include apparition-menu;
+  -webkit-animation-delay: 2s;
   animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes slide {
@@ -190,23 +200,51 @@ span {
   flex-direction: row;
   justify-content: space-between;
   width: 95%;
-  background: #ffffff;
+  background: $color-secondary;
   border-radius: 20px;
   max-width: 500px;
   height: 80px;
   margin: 0px auto 20px auto;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  &_coche {
+    opacity: 0;
+    display: flex;
+    width: 0px;
+    background: #99e2d0;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    .check {
+      display: none;
+      color: #99e2d0;
+      padding: 5px;
+      border-radius: 25px;
+      background: #ffffff;
+      margin: auto;
+    }
+  }
+
   &:hover {
     .choix-menu_coche {
-      margin-right: 0px;
       transition: 400ms;
       opacity: 1;
       width: 60px;
       flex-shrink: 0;
     }
     .check {
+      display: inline;
+      -webkit-animation: rotation 500ms;
       animation: rotation 500ms;
     }
+  }
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(-300deg);
+  }
+  100% {
+    transform: rotate(0);
   }
 }
 
@@ -218,34 +256,31 @@ span {
     transform: rotate(0);
   }
 }
-.choix-menu p {
-  margin: 0px;
-  padding-top: 10px;
-  padding-left: 10px;
-  font-size: 14px;
-  font-weight: normal;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.choix-menu h3 {
-  padding: 15px 0px 0px 10px;
-  margin: 0px;
-  font-size: 17px;
-  font-weight: bold;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
 .choix-menu {
+  p {
+    margin: 0px;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+    cursor: pointer;
+    @include ellipsis;
+  }
+  h3 {
+    cursor: pointer;
+    padding: 15px 0px 0px 10px;
+    margin: 0px;
+    font-size: 17px;
+    font-weight: bold;
+    white-space: nowrap;
+    @include ellipsis;
+  }
   &_texte {
     display: flex;
     flex-direction: column;
     white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
+    @include ellipsis;
   }
   &_tarif {
     display: flex;
@@ -259,27 +294,7 @@ span {
 }
 
 .ellipsis {
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.choix-menu_coche {
-  opacity: 0;
-  margin-right: 0px;
-  display: flex;
-  width: 0px;
-  height: 80px;
-  background: #99e2d0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  .check {
-    height: 25px;
-    color: #99e2d0;
-    padding: 5px;
-    border-radius: 25px;
-    background: #ffffff;
-    margin: auto;
-  }
+  @include ellipsis;
 }
 
 /* bouton "commander"  */
@@ -292,6 +307,7 @@ span {
   border-radius: 25px;
   margin: 80px auto;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
   p {
     margin: 0px;
     text-align: center;

@@ -1,0 +1,24 @@
+@mixin apparition-menu {
+  opacity: 0;
+  -webkit-animation: 2s slide forwards;
+  animation: 2s slide forwards;
+}
+
+@mixin lien-footer {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  color: #ffffff;
+}
+
+@mixin footer-responsive {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 30px;
+}
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

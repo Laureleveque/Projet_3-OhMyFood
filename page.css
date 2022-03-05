@@ -2,20 +2,22 @@
 /* police personnalisée */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100;1,400&family=Shrikhand&display=swap");
+/* mixins */
 /* box-sizing */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+/* variables */
+/* body */
 body {
   font-family: "Roboto", sans-serif;
-  min-width: 375px;
 }
 
 a {
   -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration-line: none;
   color: black;
 }
 
@@ -32,8 +34,11 @@ header {
   width: 60px;
   height: 60px;
   font-weight: bold;
-  padding-top: 20px;
-  padding-left: 15px;
+  padding: 20px 0px 0px 15px;
+}
+
+#fleche:hover {
+  color: #99e2d0;
 }
 
 /* Photo restaurant */
@@ -44,15 +49,13 @@ header {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px) {
   #restaurant img {
     width: 100%;
     height: 400px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 
@@ -60,8 +63,6 @@ header {
   #restaurant img {
     width: 100%;
     height: 500px;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 
@@ -76,7 +77,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 30px 0px;
+  padding: 40px 0px;
 }
 
 #titre h1 {
@@ -105,6 +106,7 @@ header {
 }
 
 .jaime:hover {
+  cursor: pointer;
   -webkit-transition: color 300ms;
   transition: color 300ms;
   -webkit-background-clip: text;
@@ -160,28 +162,27 @@ h2 {
 }
 
 #entrees {
-  padding-top: 10px;
   padding-bottom: 30px;
   opacity: 0;
   -webkit-animation: 2s slide forwards;
-          animation: 2s slide forwards;
+  animation: 2s slide forwards;
 }
 
 #plats {
   padding-bottom: 30px;
   opacity: 0;
   -webkit-animation: 2s slide forwards;
-          animation: 2s slide forwards;
+  animation: 2s slide forwards;
   -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
 }
 
 #desserts {
   opacity: 0;
   -webkit-animation: 2s slide forwards;
-          animation: 2s slide forwards;
+  animation: 2s slide forwards;
   -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 @-webkit-keyframes slide {
@@ -234,10 +235,30 @@ span {
   margin: 0px auto 20px auto;
   -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.choix-menu_coche {
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 0px;
+  background: #99e2d0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.choix-menu_coche .check {
+  display: none;
+  color: #99e2d0;
+  padding: 5px;
+  border-radius: 25px;
+  background: #ffffff;
+  margin: auto;
 }
 
 .choix-menu:hover .choix-menu_coche {
-  margin-right: 0px;
   -webkit-transition: 400ms;
   transition: 400ms;
   opacity: 1;
@@ -247,8 +268,9 @@ span {
 }
 
 .choix-menu:hover .check {
+  display: inline;
   -webkit-animation: rotation 500ms;
-          animation: rotation 500ms;
+  animation: rotation 500ms;
 }
 
 @-webkit-keyframes rotation {
@@ -280,11 +302,13 @@ span {
   font-size: 14px;
   font-weight: normal;
   white-space: nowrap;
+  cursor: pointer;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .choix-menu h3 {
+  cursor: pointer;
   padding: 15px 0px 0px 10px;
   margin: 0px;
   font-size: 17px;
@@ -326,28 +350,6 @@ span {
   overflow: hidden;
 }
 
-.choix-menu_coche {
-  opacity: 0;
-  margin-right: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 0px;
-  height: 80px;
-  background: #99e2d0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-
-.choix-menu_coche .check {
-  height: 25px;
-  color: #99e2d0;
-  padding: 5px;
-  border-radius: 25px;
-  background: #ffffff;
-  margin: auto;
-}
-
 /* bouton "commander"  */
 #commander {
   border: 1px solid transparent;
@@ -359,6 +361,7 @@ span {
   margin: 80px auto;
   -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 #commander p {
@@ -427,6 +430,7 @@ span {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-right: 30px;
   }
 }
 
@@ -441,6 +445,7 @@ span {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-right: 30px;
     padding-bottom: 20px;
   }
 }
