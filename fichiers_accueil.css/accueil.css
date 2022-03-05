@@ -187,9 +187,28 @@ header {
   margin-bottom: 50px;
 }
 
-#fonctionnement h2 {
+#fonctionnement _h2 {
   font-size: 23px;
   padding: 30px 0px 20px 20px;
+}
+
+@media screen and (min-width: 992px) {
+  #fonctionnement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 10px;
+  }
+  #fonctionnement _h2 {
+    display: block;
+  }
 }
 
 .fonctionnement-etapes_texte {
@@ -480,22 +499,6 @@ footer h3 {
 @media screen and (min-width: 992px) {
   footer h3 {
     padding-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  #fonctionnement-desktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-left: 10px;
   }
 }
 /*# sourceMappingURL=accueil.css.map */
