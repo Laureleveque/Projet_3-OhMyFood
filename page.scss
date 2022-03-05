@@ -69,7 +69,7 @@ header {
 
 /* titre et like */
 
-#titre {
+#titre-restaurant {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -92,7 +92,7 @@ header {
   }
 }
 
-.jaime {
+.titre-restaurant_jaime {
   padding-right: 40px;
   font-size: 25px;
   &:hover {

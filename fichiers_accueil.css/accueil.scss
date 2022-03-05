@@ -176,21 +176,24 @@ header {
 
 /* les différents choix */
 
-#fonctionnement {
+#etapes {
   display: flex;
   flex-direction: column;
   margin-bottom: 50px;
-  _h2 {
+  h2 {
     font-size: 23px;
     padding: 30px 0px 20px 20px;
   }
-  @media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 992px) {
+  #fonctionnement {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-left: 10px;
-    _h2 {
-      display: block;
+    h2 {
+      margin-bottom: 20px;
     }
   }
 }
@@ -314,23 +317,21 @@ header {
   align-items: center;
   justify-content: space-between;
   padding-top: 10px;
-}
-
-.restaurant-fiche_nom {
-  display: flex;
-  flex-direction: column;
-  width: 290px;
-  text-decoration: none;
-  padding: 5px 0px 0px 20px;
+  &_nom {
+    display: flex;
+    flex-direction: column;
+    width: 290px;
+    text-decoration: none;
+    padding: 5px 0px 0px 20px;
+  }
   p {
     margin: 0px;
     padding-top: 5px;
   }
-}
-
-.jaime {
-  padding-right: 30px;
-  font-size: 25px;
+  &_jaime {
+    padding-right: 30px;
+    font-size: 25px;
+  }
 }
 
 .jaime1 {
@@ -341,7 +342,7 @@ header {
   opacity: 0;
 }
 
-.jaime:hover {
+.restaurant-fiche_jaime:hover {
   transition: color 300ms;
   -webkit-background-clip: text;
   background-image: linear-gradient(to bottom, #ff79da, #9356dc);

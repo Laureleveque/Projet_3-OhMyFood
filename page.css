@@ -67,7 +67,7 @@ header {
 }
 
 /* titre et like */
-#titre {
+#titre-restaurant {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -80,7 +80,7 @@ header {
   padding: 40px 0px;
 }
 
-#titre h1 {
+#titre-restaurant h1 {
   font-family: "shrikhand", cursive;
   font-size: 25px;
   margin: 0px;
@@ -89,23 +89,23 @@ header {
 }
 
 @media screen and (min-width: 992px) {
-  #titre {
+  #titre-restaurant {
     margin-left: 40px;
     margin-right: 40px;
     padding-top: 20px;
     padding-bottom: 75px;
   }
-  #titre h1 {
+  #titre-restaurant h1 {
     font-size: 30px;
   }
 }
 
-.jaime {
+.titre-restaurant_jaime {
   padding-right: 40px;
   font-size: 25px;
 }
 
-.jaime:hover {
+.titre-restaurant_jaime:hover {
   cursor: pointer;
   -webkit-transition: color 300ms;
   transition: color 300ms;
@@ -115,7 +115,7 @@ header {
   color: transparent;
 }
 
-.jaime:hover .jaime2 {
+.titre-restaurant_jaime:hover .jaime2 {
   opacity: 1;
   color: transparent;
 }
